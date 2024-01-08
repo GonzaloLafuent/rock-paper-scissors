@@ -228,3 +228,9 @@ estilo para el contenedor que contiene el texto donde se selecciona al ganador
         font-weight: bolder;
         color:#FAEF5D;
     }
+
+    .img-winner{
+        height: auto;
+        width: 10%;
+        padding-right: 10px;
+    }

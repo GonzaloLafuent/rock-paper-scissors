@@ -4,6 +4,7 @@ const op_player_image = document.querySelector("#img-player-option");
 const op_computer_image = document.querySelector("#img-computer-option");
 const btn_jugar = document.querySelector(".play")
 const text_winner = document.querySelector(".txt-winner");
+const img_win = document.querySelector(".img-winner");
 
 let click = 0;
 let func = "";
@@ -90,9 +91,17 @@ function jugar(){
             computer_op = getComputerChoice();
             op_computer_image.setAttribute("src","Images/"+computer_op+".png");
             text_winner.textContent = playRound(option_player,computer_op);
+            if(winner==="computer"){
+                img_win.setAttribute("src","../Images/perder.png");
+            } else if(winner==="player"){
+                img_win.setAttribute("src","../Images/ganar.png");    
+            } else{
+                img_win.setAttribute("src","../Images/empate.png");
+            }
             setTimeout(() => {
                 text_winner.textContent = "";
                 op_computer_image.setAttribute("src","../Images/pregunta.png");
+                img_win.setAttribute("src","");
             }, 2000); 
         }
     });

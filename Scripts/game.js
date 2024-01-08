@@ -1,6 +1,7 @@
 const options = ["piedra","papel","tijera"];    
 let player_wins = 0;
 let computer_wins = 0;
+let winner = "";
 
 /*funciones del juego*/
 
@@ -31,8 +32,13 @@ function playRound(playerSelection,computerSelection){
                 break;    
         }
     }
-    if(msg_perdido===resultado) computer_wins++;
-    else if(msg_ganado===resultado) player_wins++;
+    if(msg_perdido===resultado){ 
+        computer_wins++;
+        winner = "computer";
+    } else if(msg_ganado===resultado){
+        winner = "player"; 
+        player_wins++;
+    } else winner = "empate";
     return resultado;
 }
 
