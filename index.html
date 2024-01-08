@@ -7,25 +7,37 @@
     <link rel="stylesheet" href="Styles/style.css">
 </head>
 <body>
-    <h1>ROCK,PAPER SCISSORS?</h1>
+    <div class="title">
+        <h1>PIEDRA,PAPEL O TIJERA?</h1>
+    </div>    
     <div class="conteiner">
         <div class="player">
+            <div class="human-title">
+                <h2>HUMANO:</h2>
+            </div>
             <div class="player-option">
-                <img class="img-option" src="">
+                <img class="img-player-option" src="../Images/pregunta.png">
             </div>
             <ul>
-                <button class="option" id="rock-option">rock</button>
-                <button class="option" id="paper-option">paper</button>
-                <button class="option" id="scissors-option">scissors</button>
-            </ul>    
+                <button class="option" id="rock-option">PIEDRA</button>
+                <button class="option" id="paper-option">PAPEL</button>
+                <button class="option" id="scissors-option">TIJERA</button>
+            </ul>
+        </div>
+        <div class="versus-play">
+            <img id="versus" src="../Images/vs.png">
+            <button class="play">JUGAR</button>
+            <div class="conteiner-ganador"><p class="ganador"></p></div>    
         </div>
         <div class="computer">
-
+            <div class="computer-title">      
+                <h2>COMPUTADORA:</h2>
+            </div>
+            <div class="computer-option">
+                <img class="img-computer-option" src="../Images/pregunta.png">
+            </div>
         </div>
     </div>    
-    <div class="resultado">
-
-    </div>
 </body>
 <script src="Scripts/game.js"></script>
 <script src="Scripts/script.js"></script>
