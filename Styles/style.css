@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    background-color: grey;
+}
+
+h1{
+    text-align: center;
+    margin: 16px;
+}
+
+.conteiner{
+    display: flex;
+    justify-content: space-around;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 30px 310px 400px 300px;
+}
+
+.player-option{
+    background-color: aliceblue;
+    width: 280px;
+    height: 280px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+ul{
+    flex: display;
+}
+
+.computer{
+    background-color: blue;
+    padding: 30px 300px 400px 310px;
+}

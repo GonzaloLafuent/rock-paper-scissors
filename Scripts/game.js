@@ -2,11 +2,15 @@ const options = ["piedra","papel","tijera"];
 let player_wins = 0;
 let computer_wins = 0;
 
+/*funciones del juego*/
+
+/*computa la opcion de la computadora*/
 function getComputerChoice(){
     let select = Math.floor(Math.random() * (options.length));
     return options[select];
 }
 
+/*juega una ronda entre la computadro y la seleccion de la persona*/
 function playRound(playerSelection,computerSelection){
     let player_sel = playerSelection.toLowerCase().trim();
     let resultado = "";
@@ -32,17 +36,4 @@ function playRound(playerSelection,computerSelection){
     return resultado;
 }
 
-function Game(){
-    for (let i=0; i<5; i++) {
-        let selection = prompt("piedra, papel o tijera?");
-        alert(playRound(selection,getComputerChoice()))
-    }
-    if(player_wins>computer_wins) alert("has ganado la partida al mejor de 5");
-    else if(player_wins<computer_wins) alert("has perdido la partida");
-    else alert("es un empate");
-    player_wins = 0;
-    computer_wins = 0;
-}
 
-while(true)
-    Game();
