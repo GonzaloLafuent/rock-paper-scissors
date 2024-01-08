@@ -1,33 +1,50 @@
 const btn_options = document.querySelectorAll(".option");
 const conteiner = document.querySelector(".conteiner");
-const op_image = document.querySelector(".img-player-option");
-const op_computer_image = document.querySelector(".img-computer-option");
+const op_player_image = document.querySelector("#img-player-option");
+const op_computer_image = document.querySelector("#img-computer-option");
 const btn_jugar = document.querySelector(".play")
-const text_winner = document.querySelector(".ganador");
+const text_winner = document.querySelector(".txt-winner");
 
 let click = 0;
 let func = "";
 let option_player = "";
 
+/*
+    agrega la imagen dentro del contener que representa la opcion del jugador
+    que el jugador interactuo con el mouse
+*/
 function mouseover_motion(e){
     if(e.target.textContent==="PIEDRA")
-        op_image.setAttribute("src","Images/piedra.png");
+        op_player_image.setAttribute("src","Images/piedra.png");
     else if(e.target.textContent=="PAPEL")
-        op_image.setAttribute("src","Images/papel.png");
+        op_player_image.setAttribute("src","Images/papel.png");
     else if(e.target.textContent=="TIJERA")
-        op_image.setAttribute("src","Images/tijera.png");
+        op_player_image.setAttribute("src","Images/tijera.png");
 }
 
+/*
+    añade una funcion que responde a al movmineto del mouse por arriba de
+    cada boton de opcion
+*/
 function add_mouseover_motion(){
     btn_options.forEach(op => {
         op.addEventListener("mouseover",mouseover_motion)
     }); 
 }   
 
+/*
+    eliminar la imagen dentro del contener que presenta la opcion del jugador
+    cuando el mouse se corre del boton
+*/
 function mouseout_motion(){
-    op_image.setAttribute("src","../Images/pregunta.png");
+    op_player_image.setAttribute("src","../Images/pregunta.png");
 }
 
+
+/*
+    añade una funcion que responde a al movmineto del mouse por arriba de
+    cada boton de opcion
+*/
 function add_mouseout_motion(){
     btn_options.forEach(op => {
         op.addEventListener("mouseout",mouseout_motion);         
@@ -64,6 +81,9 @@ function add_click_motion(){
     });
 }
 
+/*
+ jugar añade el evento que responde a un click para poder jugar un partida
+*/
 function jugar(){
     btn_jugar.addEventListener("click",()=>{
         if(click==1){
@@ -73,12 +93,11 @@ function jugar(){
             setTimeout(() => {
                 text_winner.textContent = "";
                 op_computer_image.setAttribute("src","../Images/pregunta.png");
-            }, 3000); 
+            }, 2000); 
         }
     });
 
 }
-
 
 add_mouseover_motion();
 add_mouseout_motion();

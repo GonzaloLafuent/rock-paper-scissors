@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Piedra,papel o tijera</title>
     <link rel="stylesheet" href="Styles/style.css">
 </head>
 <body>
@@ -11,30 +11,30 @@
         <h1>PIEDRA,PAPEL O TIJERA?</h1>
     </div>    
     <div class="conteiner">
-        <div class="player">
+        <div class="player-conteiner">
             <div class="human-title">
                 <h2>HUMANO:</h2>
             </div>
             <div class="player-option">
-                <img class="img-player-option" src="../Images/pregunta.png">
+                <img class="img-option" id="img-player-option" src="../Images/pregunta.png">
             </div>
-            <ul>
+            <ul class="options">
                 <button class="option" id="rock-option">PIEDRA</button>
                 <button class="option" id="paper-option">PAPEL</button>
                 <button class="option" id="scissors-option">TIJERA</button>
             </ul>
         </div>
-        <div class="versus-play">
-            <img id="versus" src="../Images/vs.png">
+        <div class="option-middle">
+            <img id="img-versus" src="../Images/vs.png">
             <button class="play">JUGAR</button>
-            <div class="conteiner-ganador"><p class="ganador"></p></div>    
+            <div class="conteiner-txt-winner"><p class="txt-winner"></p></div>    
         </div>
-        <div class="computer">
+        <div class="computer-conteiner">
             <div class="computer-title">      
                 <h2>COMPUTADORA:</h2>
             </div>
             <div class="computer-option">
-                <img class="img-computer-option" src="../Images/pregunta.png">
+                <img class="img-option" id="img-computer-option" src="../Images/pregunta.png">
             </div>
         </div>
     </div>    
