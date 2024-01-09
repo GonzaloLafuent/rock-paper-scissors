@@ -38,7 +38,7 @@ function add_mouseover_motion(){
     cuando el mouse se corre del boton
 */
 function mouseout_motion(){
-    op_player_image.setAttribute("src","/Images/pregunta.png");
+    op_player_image.setAttribute("src","Images/pregunta.png");
 }
 
 
@@ -92,15 +92,15 @@ function jugar(){
             op_computer_image.setAttribute("src","Images/"+computer_op+".png");
             text_winner.textContent = playRound(option_player,computer_op);
             if(winner==="computer"){
-                img_win.setAttribute("src","/Images/perder.png");
+                img_win.setAttribute("src","Images/perder.png");
             } else if(winner==="player"){
-                img_win.setAttribute("src","/Images/ganar.png");    
+                img_win.setAttribute("src","Images/ganar.png");    
             } else{
-                img_win.setAttribute("src","/Images/empate.png");
+                img_win.setAttribute("src","Images/empate.png");
             }
             setTimeout(() => {
                 text_winner.textContent = "";
-                op_computer_image.setAttribute("src","/Images/pregunta.png");
+                op_computer_image.setAttribute("src","Images/pregunta.png");
                 img_win.setAttribute("src","");
             }, 2000); 
         }
